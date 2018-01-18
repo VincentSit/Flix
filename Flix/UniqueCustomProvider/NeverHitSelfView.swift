@@ -8,9 +8,9 @@
 
 import UIKit
 
-class NeverHitSelfView: UIView {
+public class NeverHitSelfView: UIView {
 
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         guard let result = super.hitTest(point, with: event), result !== self else { return nil }
         return result
     }
